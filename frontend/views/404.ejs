@@ -1,0 +1,39 @@
+<%-
+/* =================================================================================================
+   File: error.ejs
+   Description:
+       This EJS template displays an error message page in a clean, centered Bootstrap card layout.
+       It dynamically renders:
+         - A title from the "title" variable
+         - An error message from the "error" variable
+         - A button linking back to the homepage
+       It uses Bootstrap 5 classes for styling, centering, and responsiveness.
+
+   Usage:
+       Pass "title" and "error" variables from the server when rendering.
+       Example:
+           res.render('error', { title: '404 - Page Not Found', error: 'The page you requested does not exist.' });
+
+   Dependencies:
+       - Bootstrap 5 CSS and JS (loaded in ./partials/header)
+       - Partials: ./partials/header, ./partials/footer
+================================================================================================= */
+%>
+
+<%- include('./partials/header', {title: '404'}) %>
+
+<main>
+    <div class="container-fluid bg-primary">
+        <div class="row d-flex align-items-center justify-content-center min-vh-100">
+            <div class="card" style="max-width: 600px">
+                <div class="card-body text-center">
+                    <h2 class="text-center fw-bold fs-1"><%= title %></h2>
+                    <p class="text-center"><%= error %></p>
+                    <a class="btn btn-primary" href="/">Back To HomePage</a>
+                </div>
+            </div> 
+        </div>
+    </div>
+</main>
+
+<%- include('./partials/footer') %>
