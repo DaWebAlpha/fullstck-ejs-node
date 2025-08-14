@@ -1,0 +1,27 @@
+{
+  "name": "fullstck-ejs-node",
+  "version": "1.0.0",
+  "description": "This is a repository to create a full stack project using ejs, node, express",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaWebAlpha/fullstck-ejs-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaWebAlpha/fullstck-ejs-node/issues"
+  },
+  "homepage": "https://github.com/DaWebAlpha/fullstck-ejs-node#readme",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^7.8.7"
+  }
+}
